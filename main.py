@@ -32,13 +32,15 @@ def game():
     while lives > 0:
         print(f"Lives remaining: {lives}")
         picked = pick_number()
-        if compare_numbers(picked, goal_number) == 0:
+        result = compare_numbers(picked, goal_number)
+
+        if result == 0:
             print("You win!")
             break
-        if compare_numbers(picked, goal_number) == 1:
+        if result == 1:
             print("Too low!")
             lives -= 1
-        if compare_numbers(picked, goal_number) == 2:
+        if result == 2:
             print("Too high!")
             lives -= 1
 
