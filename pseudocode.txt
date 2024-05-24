@@ -1,0 +1,4 @@
+create a class of game
+inside game, add the modes with their lives
+inside game, add the mode selector function
+inside game, add the pick number function
