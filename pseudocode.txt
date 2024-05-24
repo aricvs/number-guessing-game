@@ -1,4 +1,3 @@
-create a class of game
-inside game, add the modes with their lives
-inside game, add the mode selector function
-inside game, add the pick number function
+choose the mode
+if easy then get 10 lives, if hard get 5
+pick random number from 1 to 100
