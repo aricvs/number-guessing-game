@@ -1,4 +1,0 @@
-choose the mode
-if easy then get 10 lives, if hard get 5
-pick random number from 1 to 100
-run a loop for the user to guess
