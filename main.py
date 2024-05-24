@@ -8,7 +8,6 @@ def choose_mode():
 
 def number_randomizer():
     goal_number = random.randint(1, 100)
-    print(goal_number)  # for testing, delete later
     return goal_number
 
 
@@ -19,21 +18,32 @@ def pick_number():
 
 def compare_numbers(pick, goal):
     if pick == goal:
-        # print("Equals")  # for testing, delete later
         return 0
     if pick < goal:
-        # print("Lower")  # for testing, delete later
         return 1
     if pick > goal:
-        # print("Higher")  # for testing, delete later
         return 2
 
 
 def game():
     lives = choose_mode()
     goal_number = number_randomizer()
+
     while lives > 0:
+        print(f"Lives remaining: {lives}")
         picked = pick_number()
+        if compare_numbers(picked, goal_number) == 0:
+            print("You win!")
+            break
+        if compare_numbers(picked, goal_number) == 1:
+            print("Too low!")
+            lives -= 1
+        if compare_numbers(picked, goal_number) == 2:
+            print("Too high!")
+            lives -= 1
+
+    if lives == 0:
+        print("You lose!")
 
 
-print(compare_numbers(pick_number(), number_randomizer()))
+game()
