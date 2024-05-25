@@ -1,8 +1,5 @@
 import random
 
-# TODO refactor the code as OOP
-
-
 def choose_mode():
     chosen_mode = input("Choose your mode, easy or hard (e/h): ").strip().lower()
     return 10 if chosen_mode == "e" else 5
